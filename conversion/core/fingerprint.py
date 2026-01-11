@@ -149,6 +149,7 @@ class Fingerprint:
             self.cga = "JP2" # COMPRESSION ALGORITHM [242-HQ-A6687913-SYSDOCU 3.82 value (ASCII)]
             x += "opj_compress -i {} -o {} -r {} -n 2".format(i,o, ratio)
         # Add other options later if needed.
+        print(x)
         os.system(x)
         self.converted = o
         # Now segment
